@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    --primary-bright-orange: hsl(31, 77%, 52%);
+    --primary-dark-cyan: hsl(184, 100%, 22%);
+    --primary-very-dark-cyan: hsl(179, 100%, 13%);
+
+    --neutral-transparent-white: hsla(0, 0%, 100%, 0.75);
+    --neutral-very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+body {
+    background-color: var(--neutral-very-light-gray);
+}
+
+.column-container {
+    margin: 80px 0;
+    width: 100%;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.single-card {
+    width: 327px;
+    height: 442px;
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.single-card h1 {
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--neutral-very-light-gray);
+    padding-top: 16px;
+}
+
+.single-card p {
+    font-weight: 400;
+    line-height: 25px;
+    color: var(--neutral-very-light-gray);
+    padding-top: 12px;
+}
+
+.orange {
+    background: var(--primary-bright-orange);
+    border-radius: 8px 8px 0 0;
+}
+
+.cyan {
+    background: var(--primary-dark-cyan);
+}
+
+.dark-cyan {
+    background: var(--primary-very-dark-cyan);
+    border-radius: 0 0 8px 8px;
+}
+
+button {
+    border-radius: 25px;
+    border: none;
+    background-color: var(--neutral-very-light-gray);
+    padding: 14px 32px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.orange button {
+    color: var(--primary-bright-orange);
+}
+
+.cyan button {
+    color: var(--primary-dark-cyan);
+}
+
+.dark-cyan button {
+    color: var(--primary-very-dark-cyan);
+}
+
+button:active {
+    box-shadow: inset 0 0 0 2px var(--neutral-very-light-gray);
+    color: var(--neutral-very-light-gray);
+    background-color: transparent;
+}
+
+
+@media (min-width: 1040px) {
+    .column-container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: transparent;
+        margin: 0;
+    }
+    .orange {
+        border-radius: 8px 0 0 8px;
+    }
+
+    .dark-cyan {
+        border-radius: 0 8px 8px 0;
+    }
+
+    .single-card {
+        width: 307px;
+        height: 500px;
+    }
+}
